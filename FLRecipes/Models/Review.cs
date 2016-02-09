@@ -5,16 +5,17 @@ using System.Web;
 
 namespace FLRecipes.Models
 {
-    public class Reviews
+    public class Review
     {
-        public enum eReviewStarRating {
-            NONE = 0,
-            One,
-            Two,
-            Three,
-            Four,
-            Five
-        }
+
+        //public enum eReviewStarRating {
+        //    NONE = 0,
+        //    One,
+        //    Two,
+        //    Three,
+        //    Four,
+        //    Five
+        //}
 
         public int ID { get; set; }
         public int RecipeID { get; set; }

@@ -8,6 +8,7 @@ namespace FLRecipes.Models
     
     public class Recipe
     {
+        /*
         public enum eCookingMethod {
             NONE = 0,
             STOVETOP,
@@ -31,8 +32,9 @@ namespace FLRecipes.Models
             RELEASED,
             REJECTED
         }
+        */
 
-        private eReleasedFlag _releasedFlag;
+        //private eReleasedFlag _releasedFlag;
 
 
         public int ID { get; set; }
@@ -41,7 +43,7 @@ namespace FLRecipes.Models
         public string Ingredients { get; set; }
         public string Preparation { get; set; }
         public string CookingInstructions { get; set; }
-        public eCookingMethod CookingMethod { get; set; }
+        //public eCookingMethod CookingMethod { get; set; }
         public string ServingInstructions { get; set; }
         public string NutritionInformation { get; set; }
         public int NumberOfReviews { get; set; }
@@ -55,17 +57,17 @@ namespace FLRecipes.Models
         }
         public string SubmittedInitials { get; set; }
 
-        public eReleasedFlag  ReleasedFlag
-        {
-            get { return _releasedFlag; }
-            set { _releasedFlag = value; }
-        }
+        //public eReleasedFlag  ReleasedFlag
+        //{
+        //    get { return _releasedFlag; }
+        //    set { _releasedFlag = value; }
+        //}
         public string PictureURL { get; set; }
         public string PictureCaption { get; set; }
         public int PicWidth { get; set; }
         public int PicHeight { get; set; }
 
-
+        public ICollection<Review> Reviews { get; set; }
 
 
     }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -14,7 +15,58 @@ namespace FLRecipes.Controllers
         public ActionResult Index()
         {
             var model = _db.Recipes.ToList();
+            ViewBag.TotalRecipes =  model.Count();
             return View(model);
+        }
+        public ActionResult List() {
+            var model = _db.Recipes.ToList();
+            ViewBag.TotalRecipes = model.Count();
+            return View(model);
+        }
+
+
+
+        public ActionResult Details(int? ID) {
+
+            if (ID == null)
+            {
+                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return RedirectToAction("List");
+            }
+            Recipe recipe = _db.Recipes.Find(ID);
+            if (recipe == null)
+            {
+                return RedirectToAction("List");
+            }
+            return View(recipe);
+        } 
+
+
+
+        public ActionResult Create() {
+            //var model = new Recipe();
+
+            //return View(model);
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Name, ShortDescription, IngredientString, Preparation, CookingInstructions, ServingInstructions, NutritionInformation")]Recipe newRecipe)
+        {
+
+            if (ModelState.IsValid)
+            {
+                _db.Recipes.Add(newRecipe);
+                _db.SaveChanges();
+               
+
+                return RedirectToAction("List");
+            }
+            else
+            {
+                return View(newRecipe);
+            }
         }
 
         protected override void Dispose(bool disposing)

@@ -40,7 +40,7 @@ namespace FLRecipes.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public string ShortDescription { get; set; }
-        public string Ingredients { get; set; }
+        public string IngredientString { get; set; }
         public string Preparation { get; set; }
         public string CookingInstructions { get; set; }
         //public eCookingMethod CookingMethod { get; set; }
@@ -68,6 +68,7 @@ namespace FLRecipes.Models
         public int PicHeight { get; set; }
 
         public ICollection<Review> Reviews { get; set; }
+        public ICollection<Ingredient> Ingredients { get; set; }
 
 
     }

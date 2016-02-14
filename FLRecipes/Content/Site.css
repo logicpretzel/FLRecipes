@@ -9,6 +9,102 @@
     padding-right: 15px;
 }
 
+/*
+    Author: Dar Dunham
+    Description: Flyer assignment
+    Date: 1/23/16
+*/
+html {
+    background-image: url( ../Images/TableCloth.jpg);
+    background-repeat: repeat-y;
+    background-color: maroon;
+}
+
+body {
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+
+}
+
+section {
+
+    margin: 10px;
+    padding: 10px;
+}
+
+    section h2 {
+        font-size: 1em;
+        color: maroon;
+        margin: 0px;
+    }
+
+img.right {
+    float: right;
+    padding: 10px;
+} 
+
+header {
+    margin: 20px;
+    text-align: center;
+    width: 800px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    background-color: wheat;
+    color: maroon;
+    border-bottom: 5px solid maroon;
+
+}
+
+header h2 {
+    text-align: right;
+    font-size: x-small;
+}
+
+footer {
+  clear: both;
+  width: 50% ;
+      margin-left: auto;
+    margin-right: auto;
+}
+
+table.tablechart {
+    border: 3px solid red;
+    
+
+}
+table.tablechart td {
+      border: 1px solid maroon;
+      padding: 5px;
+      margin: 0px;
+      border-radius: 5px;
+}
+
+aside {
+  float: right;
+  width: 10% ;
+  padding: 20px;
+  background-color: darkgoldenrod;
+  border-radius: 10px;
+  font-size: medium;
+  margin-left: 0px;
+  margin-right: -100px;
+  text-align: center;
+}
+
+.aside_hl {
+    
+    font-size: x-large;  
+}
+ 
+
+
+
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */

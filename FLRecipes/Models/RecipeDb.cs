@@ -8,6 +8,11 @@ using System.Web;
 
 namespace FLRecipes.Models
 {
+    /// <summary>
+    /// Author: Dar Dunham
+    /// Date: 2/15/16
+    /// Model
+    /// </summary>
     public class RecipeDb : DbContext
     {
         

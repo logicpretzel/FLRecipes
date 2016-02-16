@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace FLRecipes.Models
 {
-   public class GroceryCart
+    /// <summary>
+    /// Author: Dar Dunham
+    /// Date: 2/15/16
+    /// Model
+    /// </summary>
+    public class GroceryCart
     {
         public int ID { get; set; }
         public int SubscriberID { get; set; }

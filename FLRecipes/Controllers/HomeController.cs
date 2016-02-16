@@ -7,6 +7,11 @@ using System.Web.Mvc;
 
 namespace FLRecipes.Controllers
 {
+    /// <summary>
+    /// Author: Dar Dunham
+    /// Date: 2/15/16
+    /// Controller for home page
+    /// </summary>
     public class HomeController : Controller
     {
       

@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FLRecipes.Models
+{
+    public enum eMPDay {
+        NONE = 0,
+        SUN,
+        MON,
+        TUE,
+        WED,
+        THU,
+        FRI,
+        SAT
+    }
+
+    public class MPlanItem
+    {
+        public int ID { get; set; }
+        public int MealPlanID { get; set; }
+        public string Description { get; set; }
+        public DateTime MealDate { get; set; }
+        public eMPDay MealDay { get; set; }
+
+
+    }
+}

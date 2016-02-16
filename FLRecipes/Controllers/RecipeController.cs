@@ -1,6 +1,9 @@
-﻿using FLRecipes.Models;
+﻿
+using FLRecipes.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -11,6 +14,7 @@ namespace FLRecipes.Controllers
     public class RecipeController : Controller
     {
         RecipeDb _db = new RecipeDb();
+        // (localdb)\MsSqlLocalDb
         // GET: Recipe
         public ActionResult Index()
         {
@@ -39,9 +43,51 @@ namespace FLRecipes.Controllers
                 return RedirectToAction("List");
             }
             return View(recipe);
-        } 
+        }
 
+        public ActionResult Edit(int? ID)
+        {
 
+            if (ID == null)
+            {
+                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return RedirectToAction("List");
+            }
+            Recipe recipe = _db.Recipes.Find(ID);
+            if (recipe == null)
+            {
+                return RedirectToAction("List");
+            }
+            return View(recipe);
+        }
+
+        //[HttpPost, ActionName("Edit")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "Name, ShortDescription, IngredientString, Preparation, CookingInstructions, ServingInstructions, NutritionInformation")]Recipe newRecipe)
+        {
+            if (newRecipe == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            
+            if (TryUpdateModel(newRecipe))
+            {
+                try
+                {
+                    _db.Entry(newRecipe).State = EntityState.Modified;
+                    _db.SaveChanges();
+
+                    return RedirectToAction("List");
+                }
+                catch (DataException /* dex */)
+                {
+                    //TODO: Log the error (uncomment dex variable name and add a line here to write a log.
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
+                }
+            }
+            return View(newRecipe);
+        }
 
         public ActionResult Create() {
             //var model = new Recipe();
@@ -79,3 +125,6 @@ namespace FLRecipes.Controllers
         }
     }
 }
+/* To Do:
+//https://www.youtube.com/watch?v=QJJSnUVX6PA
+*/

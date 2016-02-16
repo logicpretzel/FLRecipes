@@ -9,9 +9,7 @@ namespace FLRecipes.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
-            ContextKey = "FLRecipes.Models.RecipeDb";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(FLRecipes.Models.RecipeDb context)

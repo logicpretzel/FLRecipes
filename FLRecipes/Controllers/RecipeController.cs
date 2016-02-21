@@ -101,7 +101,7 @@ namespace FLRecipes.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Name, ShortDescription, IngredientString, Preparation, CookingInstructions, ServingInstructions, NutritionInformation")]Recipe newRecipe)
+        public ActionResult Create([Bind(Include = "Name, ShortDescription, IngredientString, Preparation, CookingInstructions, ServingInstructions, NutritionInformation, SubscriberID")]Recipe newRecipe)
         {
 
             if (ModelState.IsValid)

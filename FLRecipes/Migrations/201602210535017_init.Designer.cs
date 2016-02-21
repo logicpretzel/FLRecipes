@@ -7,13 +7,13 @@ namespace FLRecipes.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class recipes : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(recipes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201602210454401_recipes"; }
+            get { return "201602210535017_init"; }
         }
         
         string IMigrationMetadata.Source

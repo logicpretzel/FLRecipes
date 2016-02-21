@@ -179,17 +179,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RecipeController.cs" />
-    <Compile Include="Migrations\201602160057277_init.cs" />
-    <Compile Include="Migrations\201602160057277_init.Designer.cs">
-      <DependentUpon>201602160057277_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602160226047_Images.cs" />
-    <Compile Include="Migrations\201602160226047_Images.Designer.cs">
-      <DependentUpon>201602160226047_Images.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602210454401_recipes.cs" />
-    <Compile Include="Migrations\201602210454401_recipes.Designer.cs">
-      <DependentUpon>201602210454401_recipes.cs</DependentUpon>
+    <Compile Include="Migrations\201602210535017_init.cs" />
+    <Compile Include="Migrations\201602210535017_init.Designer.cs">
+      <DependentUpon>201602210535017_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Image.cs" />
@@ -294,14 +286,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602160057277_init.resx">
-      <DependentUpon>201602160057277_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602160226047_Images.resx">
-      <DependentUpon>201602160226047_Images.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602210454401_recipes.resx">
-      <DependentUpon>201602210454401_recipes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602210535017_init.resx">
+      <DependentUpon>201602210535017_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

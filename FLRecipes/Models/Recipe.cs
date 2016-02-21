@@ -12,7 +12,7 @@ namespace FLRecipes.Models
     /// </summary>
     public class Recipe
     {
-        /*
+        
         public enum eCookingMethod {
             NONE = 0,
             STOVETOP,
@@ -36,9 +36,9 @@ namespace FLRecipes.Models
             RELEASED,
             REJECTED
         }
-        */
+       
 
-        //private eReleasedFlag _releasedFlag;
+        private eReleasedFlag _releasedFlag;
 
 
         public int ID { get; set; }
@@ -47,25 +47,25 @@ namespace FLRecipes.Models
         public string IngredientString { get; set; }
         public string Preparation { get; set; }
         public string CookingInstructions { get; set; }
-        //public eCookingMethod CookingMethod { get; set; }
+        public eCookingMethod CookingMethod { get; set; }
         public string ServingInstructions { get; set; }
         public string NutritionInformation { get; set; }
         public int NumberOfReviews { get; set; }
         public decimal Rating { get; set; }
 
         private int _submittedBy;
-        public int SubmittedBy
+        public int SubscriberID 
         {
             get { return _submittedBy; }
             set { _submittedBy = value; }
         }
         public string SubmittedInitials { get; set; }
 
-        //public eReleasedFlag  ReleasedFlag
-        //{
-        //    get { return _releasedFlag; }
-        //    set { _releasedFlag = value; }
-        //}
+        public eReleasedFlag ReleasedFlag
+        {
+            get { return _releasedFlag; }
+            set { _releasedFlag = value; }
+        }
         public string PictureURL { get; set; }
         public string PictureCaption { get; set; }
         public int PicWidth { get; set; }

@@ -9,21 +9,53 @@
       Date: 2/15/15
 *@
 
-<h2>Index</h2>
+<div class="jumbotron">Recipes</div>
+
 <div class="row">
     <div class="col-sm-4">
     <div class="well">
-        Total Recipes: @ViewBag.TotalRecipes
+        Total Recipes: @ViewBag.TotalRecipes 
     </div>
     </div>
-    <div class="col-sm-4">.col-sm-4</div>
-    <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-sm-8">
+             <a href="~/Recipe/List/" class="btn btn-primary">Browse Entire Recipe Listing</a>
+    </div>
+    
 </div>
+
+<div class="row">
+    <div class="col-sm-6">
+        &nbsp;
+    </div>
+    <div class="col-sm-6">
+        <a id="EntreesLink" class="btn btn-primary " href="#">
+            Entrees
+            <img src="~/images/entree.jpg" width="400" height="200" alt="Entree" />
+        </a>
+    </div>
+
+</div>
+<div class="row">
+        <div class="col-sm-6">
+            &nbsp;
+        </div>
+        <div class="col-sm-6">
+            <a id="DessertsLink" class="btn btn-primary " href="#">
+                Deserts
+                <img src="~/images/flourlesschocolatecake.jpg" width="400" height="228" alt="Chocolate Cake" />
+            </a>
+        </div>
+        
+
+</div>
+  
+ 
+
 <p>
     
 </p>
 
 <blockquote>
     
-    <a href="~/Recipe/List/" class="btn btn-primary">Recipe Listing</a>
+    <a href="~/Recipe/List/" class="btn btn-primary">Browse Entire Recipe Listing</a>
 </blockquote>

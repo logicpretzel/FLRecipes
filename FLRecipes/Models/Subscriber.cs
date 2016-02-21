@@ -23,6 +23,8 @@ namespace FLRecipes.Models
         public DateTime MemberSince { get; set; }
         public ICollection<GroceryCart> GroceryCarts { get; set; }
         public ICollection<MealPlan> MealPlans { get; set; }
+        public ICollection<Image> Images { get; set; }
+        public ICollection<Recipe> Recipes { get; set; }
 
 
     }

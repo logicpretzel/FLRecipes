@@ -187,6 +187,10 @@
     <Compile Include="Migrations\201602160226047_Images.Designer.cs">
       <DependentUpon>201602160226047_Images.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602210454401_recipes.cs" />
+    <Compile Include="Migrations\201602210454401_recipes.Designer.cs">
+      <DependentUpon>201602210454401_recipes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\RecipeDb.cs" />
@@ -216,6 +220,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Entree.jpg" />
+    <Content Include="Images\flourlessChocolateCake.jpg" />
     <Content Include="Images\jars.png" />
     <Content Include="Images\kitchen2.png" />
     <Content Include="Images\TableCloth.jpg" />
@@ -293,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602160226047_Images.resx">
       <DependentUpon>201602160226047_Images.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602210454401_recipes.resx">
+      <DependentUpon>201602210454401_recipes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
